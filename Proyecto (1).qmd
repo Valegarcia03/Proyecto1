@@ -1,0 +1,331 @@
+---
+title: "PG1"
+author: "Grupo 6"
+format: html
+editor: visual
+---
+
+## Tema de investigación:
+
+-   Estudio de los patrones asociados al consumo de quinua en estudiantes de UTEC durante el periodo 2023-2.
+
+    ### Recoleccion de datos
+
+    -   Encuesta mediante la plataforma Google forms
+
+    ### Poblacion, muestra y muestreo
+
+    -   Población: Todos los estudiantes de UTEC en el periodo 2023-2
+    -   Muestra: 200 - 250 estudiantes de UTEC que serán encuestados
+    -   Muestreo: Probabilístico aleatorio
+
+    ### Objetivos
+
+    -   Objetivo general:
+        -   Estudiar los factores que se relacionan con el consumo de quinua en los estudiantes de UTEC durante el periodo 2023-2
+    -   Objetivos específicos:
+        -   Explorar la relación entre el consumo de quinua y el estado de salud de los estudiantes
+        -   Explorar la relación entre consumo de quinua en estudiantes y el desempeño académico de estos
+        -   Examinar las barreras que enfrentan los estudiantes para consumir la quinua
+        -   
+
+    ### Relevancia
+
+    -   La relevancia de este tema radica en analizar el consumo de quinua en los estudiantes de UTEC, para así determinar que factores logran incrementar su consumo y que tan conscientes somos sobre su alto valor nutricional y el fácil acceso que tenemos a este, ya que es un alimento oriundo de nuestro país.
+
+    ### Contexto
+
+    -   La quinua ha constituido el alimento fundamental de los pueblos andinos por mas de 5000 años y ahora lo es para toda la población del mundo. Clasificada como un cereal integral, este alimento es nativo de los Andes de Bolivia, Perú y Chile. La quinua tiene un mercado global diverso, con personas de diferentes grupos demográficos y edades que disfrutan de este producto. Se la reconoce como un alimento altamente nutritivo que es apreciado tanto en las dietas saludables de las área urbanas como rurales. En efecto, en los últimos años, ha ganado un estatus especial entre los nuevos consumidores, siendo considerado como un alimento mágico. Dentro de sus principales beneficios destaca que tiene mas proteinas que cualquier cereal, buena para la salud del corazón, baja en gluten, buena para los diabéticos, tiene un alto contenido de antioxidantes y nutrientes, es rica en fibra y minerales, gestiona el peso, entre otras. La quinua es un superalimento altamente nutritivo que puede ser una excelente adición a la dieta de los estudiantes, ayudándolos a mantener una buena salud, mejorar el rendimiento académico y establecer hábitos alimenticios saludables a lo largo de sus vidas.
+
+    ### Categorización de variables
+
+    -   Cuantitativa discreta:
+
+        -   Edad
+
+        -   Número de créditos matriculados
+
+        -   Número de cursos matriculados
+
+        -   Horas de estudio
+
+    -   Cuantitativa continua:
+
+        -   Peso
+
+        -   Estatura
+
+    -   Cualitativa nominal:
+
+        -   Sexo
+
+        -   Carrera
+
+        -   Consumo de la quinua
+
+        -   Conocimiento de la quinua
+
+        -   Tipo de quinua que consume
+
+        -   Lugar de compra
+
+        -   Razón del consumo
+
+        -   Razón del no consumo
+
+        -   Informado sobre beneficios
+
+        -   Beneficios del consumo
+
+        -   Beneficios en los estudios
+
+        -   Opinión sobre la quinua
+
+        -   Impacto de la quinua en la salud
+
+    -   Cualitativa ordinal:
+
+        -   Ciclo
+
+        -   Frecuencia del consumo
+
+        -   Priorización de su consumo
+
+        -   Relación del consumo y los estudios
+
+## Tabla de variables
+
+| Variable                            | Pregunta para recopilar información                                                          | Tipo         | Clase     | Restricciones                                    |
+|---------------|------------------------|----------------|----------------|----------------|
+| Sexo                                | ¿Cuál es su género?                                                                          | Categórica   | Nominales | Masculino, femenino , otro.                      |
+| Edad                                | ¿Qué edad tiene?                                                                             | Cuantitativa | Discretas | Entero positivo (años)                           |
+| Peso                                | ¿Cuál es su peso?                                                                            | Cuantitativa | Continuas | Entero positivo (Kilogramos)                     |
+| Estatura                            | ¿Cuál es su estatura?                                                                        | Cuantitativa | Continuas | Entero positivo (metros)                         |
+| Carrera                             | ¿Qué carrera está estudiando?                                                                | Categórica   | Nominales | Pregunta abierta                                 |
+| Ciclo académico                     | ¿En qué ciclo académico se encuentra actualmente?                                            | Cuantitativa | Ordinal   | Entero positivo \[1:10\]                         |
+| Créditos matriculados               | ¿En cuántos créditos se ha matriculado este ciclo ?                                          | Cuantitativa | Discreta  | Entero positivo                                  |
+| Cursos matriculados                 | ¿En cuántos cursos se ha matriculado este ciclo?                                             | Cuantitativa | Discreta  | Entero positivo                                  |
+| Horas de estudio                    | ¿Cuántas horas a la semana dedica a estudiar?                                                | Categórica   | Ordinales | Entero positivo                                  |
+| Conocimiento sobre la quinua        | ¿Tiene conocimiento sobre la quinua?                                                         | Categórica   | Nominal   | Pregunta cerrada (2 opciones)                    |
+| Consume quinua                      | ¿Consume quinua?                                                                             | Categórica   | Nominales | Pregunta cerrada (2 opciones)                    |
+| Razón del no consumo                | ¿A qué factor se debe su no consumo de quinua?                                               | Categórica   | Ordinal   | Pregunta cerrada (4 opciones)                    |
+| Frecuencia del consumo              | ¿Con qué frecuencia consumes quinua?                                                         | Categórica   | Ordinales | (1:Nunca, 5:Siempre)                             |
+| Tipo de quinua                      | ¿Qué tipo de quinua sueles consumir?                                                         | Categórica   | Nominales | Pregunta cerrada (3 opciones)                    |
+| Razón del consumo                   | ¿Cuál es la principal razón por la que consumes quinua?                                      | Categórica   | Nominales | Pregunta cerrada (5 opciones)                    |
+| Lugar de compra                     | ¿Dónde sueles comprar la quinua que consumes?                                                | Categórica   | Nominales | Pregunta cerrada (4 opciones)                    |
+| Informado sobre beneficios          | ¿Qué tan informado/a estás sobre los beneficios de la quinua?                                | Categórica   | Ordinales | (1:Muy desinformado, 5:Muy informado)            |
+| Beneficios de la quinua             | ¿Cúal consideras que es el principal beneficio de consumir quinua?                           | Categórica   | Nominales | Pregunta cerrada (6 opciones)                    |
+| Relevancia del consumo              | ¿Qué prioridad o relevancia le das al consumo de la quinua?                                  | Categórica   | Ordinales | (1: Muy baja, 5: Muy alta)                       |
+| Relación del consumo y los estudios | ¿Consideras que el consumo de quinua puede tener alguna relación con tu desempeño académico? | Categórica   | Ordinales | (1: Nada de relación, 5: Totalmente relacionado) |
+| Beneficios en los estudios          | ¿Cuál es la relación que tiene el consumo de quinua con respecto a los estudios?             | Categórica   | Nominales | Pregunta cerrada (5 opciones)                    |
+| Impacto en la salud                 | ¿Cuál es el impacto que tiene la quinua en su salud?                                         | Categórica   | Nominales | Pregunta cerrada (5 opciones)                    |
+| Opinión sobre el consumo            | ¿Cúal sería su opinión respecto al consumo de quinua?                                        | Categórica   | Nominales | Pregunta cerrada (3 opciones)                    |
+
+## Limpieza de base de datos
+
+### Las consideraciones para eliminar observaciones fueron
+
+-   Información irrelevante para el estudio.
+
+-   Información por números de NA.
+
+### Las consideraciones para eliminar observaciones
+
+-   Dificultad para la identificación de su estatura y peso.
+
+-   Incoherencia entre lo que interpreta R y la base de datos actual, como una opinión en números.
+
+```{r}
+library(plyr) 
+library(dplyr)
+library(readr) 
+library(tidyr) 
+library(tidyverse)
+library(ggplot2)
+library(modeest)
+```
+
+```{r}
+DF<- read_csv("_Patrones  asociados al consumo de quinua en estudiantes de UTEC durante el periodo 2023-2.csv")
+DF 
+```
+
+\- Se elimina las columnas que no son relevantes en la toma de muestra.
+
+```{r}
+DF <- DF %>%
+  select(- "Marca temporal")
+```
+
+\- Se le acortará el nombre a las variables que se utilizarán, con el uso de \`rename\`.
+
+```{r}
+DF <- rename(DF, Sexo = `¿Cuál es su sexo?`
+              , Edad = `¿Qué edad tiene?` 
+              , Peso = `¿Cuál es su peso? (Ingrese el valor entero en kg )`, 
+             Estatura = `¿Cuál es su estatura? (Ingrese el valor en cm)` ,  
+             Carrera = `¿Qué carrera está estudiando?` , 
+             Ciclo = `¿En qué ciclo académico se encuentra actualmente?` , 
+             Creditos = `¿En cuántos créditos se ha matriculado este ciclo ?` ,
+             Cursos = `¿En cuántos cursos se ha matriculado este ciclo?` ,  
+             Horas = `¿Cuántas horas a la semana dedica a estudiar, sin contar las horas de clase? (Ingresa el valor en número de horas)` , 
+             Quinua = `¿Tiene conocimiento sobre la quinua?` , 
+             Consumo = `¿Consume quinua?`, 
+             Factor = `¿A qué factor se debe su no consumo de quinua?` , 
+             Frecuencia = `¿Con qué frecuencia consumes quinua?` , 
+             Tipo = `¿Qué tipo de quinua sueles consumir?`, 
+             Razon = `¿Cuál es la principal razón por la que consumes quinua?` , 
+             Compra = `¿Dónde sueles comprar la quinua que consumes?` , 
+             Informado = `¿Qué tan informado/a estás sobre los beneficios nutricionales de la quinua?` , 
+             Beneficio = `¿Cúal consideras que es el principal beneficio de consumir quinua?`, 
+             Relevancia = `¿Qué prioridad o relevancia le das al consumo de la quinua en comparación con otros alimentos?` , 
+             Desempeño = `¿Consideras que el consumo de quinua puede tener alguna relacion con tu desempeño en los estudios?` , 
+             Relacion = `¿Cuál es la relación que tiene el consumo de quinua con respecto a los estudios?`, 
+             Impacto = `¿Cuál es el impacto que tiene la quinua en su salud?` ,
+             Opinion = `¿Cúal sería su opinión respecto al consumo de quinua?` ) 
+    
+DF
+
+```
+
+```{r}
+names(DF)
+```
+
+```{r}
+DF <- DF %>%
+  select(- Puntuación)
+DF
+```
+
+Total de Observaciones:
+
+-   Casos completos
+
+```{r}
+sum(complete.cases(DF))
+```
+
+-   Casos incompletos
+
+```{r}
+sum(!complete.cases(DF))
+```
+
+-   Tipos de varibles
+
+```{r}
+glimpse(DF)
+```
+
+```{r}
+summary(DF)
+```
+
+Cambiando el tipo de variable:
+
+```{r}
+DF$Informado<- as.character(DF$Informado)
+DF$Relevancia<- as.numeric(DF$Relevancia)
+DF$Desempeño<- as.numeric(DF$Desempeño)
+DF$Opinion<- as.character(DF$Opinion)
+```
+
+```{r}
+colSums(is.na(DF))
+```
+
+Buscando los patrones que no cumplen para carreras.
+
+```{r}
+table(DF$Carrera)
+```
+
+Bio x
+
+ciencia de datos x
+
+ciencias de la omputacion x
+
+Industrial x
+
+Ing civil x
+
+enegia x
+
+```{r}
+DF <- mutate(DF,carrera-cor==case_when(Carrera == 'Ingeniería Biológica' ~'Bioingeniería', 
+
+Carrera == 'Computer science' ~ 'Ciencias de la computación', 
+Carrera == 'Computer Science' ~ 'Ciencias de la computación',
+
+Carrera == 'Industrial'~'Ingeniería industrial',
+Carrera == 'Ing industrial'~'Ingeniería industrial',
+Carrera == 'Ing. Industrial'~'Ingeniería industrial',
+Carrera == 'Ingenieria industrial'~'Ingeniería industrial',
+Carrera == 'Ingenieria Industrial'~'Ingeniería industrial',
+Carrera == 'ingeniería industrial'~'Ingeniería industrial',
+Carrera == 'Ingeniería industrial'~'Ingeniería industrial',
+Carrera == 'Ingeniería Industrial'~'Ingeniería industrial',
+
+Carrera == 'ING chivil'~'Ingeniería civil',
+Carrera == 'Ing civil'~'Ingeniería civil',
+Carrera == 'ING civil'~'Ingeniería civil',
+Carrera == 'Ing. Civil'~'Ingeniería civil',
+Carrera == 'Ingenieria civil'~'Ingeniería civil',
+Carrera == 'Ingeniería civil'~'Ingeniería civil',
+Carrera == 'Ingeniería Civil'~'Ingeniería civil',
+
+Carrera == 'Ing de la energía'~'Ingeniería de la energía', 
+Carrera == 'Ing de la Energía'~'Ingeniería de la energía', 
+Carrera == 'Ing energia'~'Ingeniería de la energía', 
+Carrera == 'Ing. De la Energía'~'Ingeniería de la energía', 
+Carrera == 'Ingeniería de la Energía'~'Ingeniería de la energía', 
+
+Carrera == 'L'~'desconocido'))
+
+```
+
+Buscando los patrones que no cumplen para compra.
+
+```{r}
+patron_mercado <- "\\b(Mercado)\\b"
+patron_tienda <- "\\b(Tienda)\\b"
+patron_supermercado <- "\\b(Supermercado|Wong|Metro|Plaza Vea)\\b"
+
+DF1<-paste(patron_mercado,"|",patron_tienda,"|",patron_supermercado, sep = "" )
+
+DF[!grepl(DF1, DF$Compra),]
+```
+
+Remplazando
+
+```{r}
+Valorbuscar <- "Carretillas"
+Valorbuscar2 <- "Un puesto, cerca de la Universidad"
+Valorbuscar3 <- "A un negociando de confianza."
+Valorbuscar4 <- "Desde ayacucho"
+valorreemplazo <- "Mercado"
+valorreemplazo3 <- "Tienda"
+
+DF$Compra <- gsub(Valorbuscar, valorreemplazo, DF$Compra, ignore.case = TRUE)
+DF$Compra <- gsub(Valorbuscar2, valorreemplazo, DF$Compra, ignore.case = TRUE)
+DF$Compra <- gsub(Valorbuscar3, valorreemplazo3, DF$Compra, ignore.case = TRUE)
+DF$Compra <- gsub(Valorbuscar4, valorreemplazo3, DF$Compra, ignore.case = TRUE)
+DF
+```
+
+Arreglando la variable sexo
+
+```{r}
+table(DF$Sexo)
+```
+
+```{r}
+#ejemplo
+DX$Sexo<-transmute(DX, Sexo= case_when( Sexo == 'NA' ~ 'desconocido',                                                      Sexo == 'MM' ~ 'M',                                                                Sexo =='NB'~'desconocido',                                                         Sexo =='M'~'M',                                                                    Sexo =='F'~'F',                                                                    Sexo =='L'~'desconocido',                                                          Sexo =='125'~ 'desconocido',                                                       Sexo=='´M' ~ 'M'))
+```
+
+```{r}
+t
+```
