@@ -327,5 +327,5 @@ DX$Sexo<-transmute(DX, Sexo= case_when( Sexo == 'NA' ~ 'desconocido',           
 ```
 
 x2
-
+1 2 3 probandooo 
 holi
