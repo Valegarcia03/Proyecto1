@@ -326,9 +326,6 @@ table(DF$Sexo)
 DX$Sexo<-transmute(DX, Sexo= case_when( Sexo == 'NA' ~ 'desconocido',                                                      Sexo == 'MM' ~ 'M',                                                                Sexo =='NB'~'desconocido',                                                         Sexo =='M'~'M',                                                                    Sexo =='F'~'F',                                                                    Sexo =='L'~'desconocido',                                                          Sexo =='125'~ 'desconocido',                                                       Sexo=='´M' ~ 'M'))
 ```
 
-```{r}
-t
-```
 
 
 holi
