@@ -27,7 +27,7 @@ editor: visual
         -   Explorar la relación entre el consumo de quinua y el estado de salud de los estudiantes
         -   Explorar la relación entre consumo de quinua en estudiantes y el desempeño académico de estos
         -   Examinar las barreras que enfrentan los estudiantes para consumir la quinua
-        -   Investigar la conexión entre el consumo de quinua y la condición de salud de los estudiantes. (2)
+        -   Analizar la correlación entre la ingesta de quinua por parte de estudiantes y su rendimiento académico. (2)
 
     ### Relevancia
 
