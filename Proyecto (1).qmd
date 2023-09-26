@@ -25,9 +25,8 @@ editor: visual
         -   Estudiar los factores que se relacionan con el consumo de quinua en los estudiantes de UTEC durante el periodo 2023-2
     -   Objetivos específicos:
         -   Explorar la relación entre el consumo de quinua y el estado de salud de los estudiantes
-        -   Explorar la relación entre consumo de quinua en estudiantes y el desempeño académico de estos
         -   Examinar las barreras que enfrentan los estudiantes para consumir la quinua
-        -   Analizar la correlación entre la ingesta de quinua por parte de estudiantes y su rendimiento académico. (2)
+        -   Analizar la correlación entre la ingesta de quinua por parte de estudiantes y su rendimiento académico.
 
     ### Relevancia
 
