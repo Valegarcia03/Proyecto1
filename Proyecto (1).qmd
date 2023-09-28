@@ -95,7 +95,7 @@ editor: visual
 ## Tabla de variables
 
 | Variable                            | Pregunta para recopilar información                                                          | Tipo         | Clase     | Restricciones                                    |
-|---------------|------------------------|----------------|----------------|----------------|
+|--------------|----------------|--------------|--------------|--------------|
 | Sexo                                | ¿Cuál es su género?                                                                          | Categórica   | Nominales | Masculino, femenino , otro.                      |
 | Edad                                | ¿Qué edad tiene?                                                                             | Cuantitativa | Discretas | Entero positivo (años)                           |
 | Peso                                | ¿Cuál es su peso?                                                                            | Cuantitativa | Continuas | Entero positivo (Kilogramos)                     |
@@ -314,6 +314,9 @@ DF$Compra <- gsub(Valorbuscar4, valorreemplazo3, DF$Compra, ignore.case = TRUE)
 DF
 ```
 
+
+
+
 Arreglando la variable sexo
 
 ```{r}
@@ -325,6 +328,66 @@ table(DF$Sexo)
 DX$Sexo<-transmute(DX, Sexo= case_when( Sexo == 'NA' ~ 'desconocido',                                                      Sexo == 'MM' ~ 'M',                                                                Sexo =='NB'~'desconocido',                                                         Sexo =='M'~'M',                                                                    Sexo =='F'~'F',                                                                    Sexo =='L'~'desconocido',                                                          Sexo =='125'~ 'desconocido',                                                       Sexo=='´M' ~ 'M'))
 ```
 
-x2
-1 2 3 probandooo 
-holi
+x2 1 2 3 probandooo holi
+
+
+----------------- ANGEL --------------
+```{r}
+DB <- read_csv("_Patrones  asociados al consumo de quinua en estudiantes de UTEC durante el periodo 2023-2.csv")
+```
+
+Backup de la Base de Datos
+
+```{r}
+DB_ <- DB
+```
+
+Limpieza de la variable **SEXO**
+
+```{r}
+DB_ <- DB_ %>% rename("SEXO" = `¿Cuál es su sexo?`)
+```
+
+Tipo de variable
+
+```{r}
+str(DB_$SEXO)
+```
+
+OK.
+
+Analizando los datos ingresados
+
+```{r}
+table(DB_$SEXO)
+```
+
+Observamos que hay 2 observaciones que no especifican una categoria concreta de variable. Analizamos las demas observaciones por variable para decidir si la informacion proporcionada es sensata.
+
+```{r}
+obs1 <- "Mapache"
+obs2 <- "Pepsi"
+DB_[DB_$SEXO==obs1,]
+DB_[DB_$SEXO==obs2,]
+```
+
+Observamos que las demas variables tienen informacion relevante para nuestro estudio. Por ello, decidimos no borrarlas. En su lugar, las categorizamos dentro de la categoria *No especifico*. De igual forma para las observaciones *Prefiero no decirlo*
+
+```{r}
+DB_[which(DB_$SEXO=="Mapache"), "SEXO"] <- "No especifico"
+DB_[which(DB_$SEXO=="Pepsi"), "SEXO"] <- "No especifico"
+DB_[which(DB_$SEXO=="Prefiero no decirlo"), "SEXO"] <- "No especifico"
+```
+
+Finalmente, tenemos las siguientes categorias dentro de la variable **SEXO**
+
+```{r}
+table(DB_$SEXO)
+```
+
+```{r}
+DB <- DB_
+```
+
+Variable *SEXO* limpia.
+
