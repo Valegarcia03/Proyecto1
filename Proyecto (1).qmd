@@ -287,23 +287,29 @@ Carrera == 'L'~'desconocido'))
 
 Buscando los patrones que no cumplen para compra.
 
-```{r}
+{r}
 patron_mercado <- "\\b(Mercado)\\b"
 patron_tienda <- "\\b(Tienda)\\b"
 patron_supermercado <- "\\b(Supermercado|Wong|Metro|Plaza Vea)\\b"
+patron_todas <- "\\b(Todas las anteriores)\\b"
 
-DF1<-paste(patron_mercado,"|",patron_tienda,"|",patron_supermercado, sep = "" )
+DF1<-paste(patron_mercado,"|",patron_tienda,"|",patron_supermercado,"|",patron_todas, sep = "" )
 
 DF[!grepl(DF1, DF$Compra),]
-```
 
 Remplazando
 
-```{r}
+{r}
 Valorbuscar <- "Carretillas"
 Valorbuscar2 <- "Un puesto, cerca de la Universidad"
 Valorbuscar3 <- "A un negociando de confianza."
 Valorbuscar4 <- "Desde ayacucho"
+Valorbuscar5 <- "Carritos desayuneros"
+Valorbuscar6 <- "Emolientero"
+Valorbuscar7 <- "Bebida en carrellita"
+Valorbuscar8 <- "Preparada en carretilla"
+Valorbuscar9 <- "Carretilla"
+Valorbuscar10 <- "Carrito"
 valorreemplazo <- "Mercado"
 valorreemplazo3 <- "Tienda"
 
@@ -311,11 +317,47 @@ DF$Compra <- gsub(Valorbuscar, valorreemplazo, DF$Compra, ignore.case = TRUE)
 DF$Compra <- gsub(Valorbuscar2, valorreemplazo, DF$Compra, ignore.case = TRUE)
 DF$Compra <- gsub(Valorbuscar3, valorreemplazo3, DF$Compra, ignore.case = TRUE)
 DF$Compra <- gsub(Valorbuscar4, valorreemplazo3, DF$Compra, ignore.case = TRUE)
+DF$Compra <- gsub(Valorbuscar5, valorreemplazo, DF$Compra, ignore.case = TRUE)
+DF$Compra <- gsub(Valorbuscar6, valorreemplazo, DF$Compra, ignore.case = TRUE)
+DF$Compra <- gsub(Valorbuscar7, valorreemplazo, DF$Compra, ignore.case = TRUE)
+DF$Compra <- gsub(Valorbuscar8, valorreemplazo, DF$Compra, ignore.case = TRUE)
+DF$Compra <- gsub(Valorbuscar9, valorreemplazo, DF$Compra, ignore.case = TRUE)
+DF$Compra <- gsub(Valorbuscar10, valorreemplazo, DF$Compra, ignore.case = TRUE)
 DF
-```
 
+Para la razon
 
+{r}
+patron_salud <- "\\b(Por salud)\\b"
+patron_sabor <- "\\b(Por sabor)\\b"
+patron_costumbre <- "\\b(Por costumbre)\\b"
+patron_todas_anteriores <- "\\b(Todas las anteriores)\\b"
 
+DF2<-paste(patron_salud,"|",patron_sabor,"|",patron_costumbre,"|",patron_todas_anteriores, sep = "" )
+
+DF[!grepl(DF2, DF$Razon),]
+
+Reemplazando
+
+{r}
+Rvalorbuscar <- "Todas las anteriores :D"
+Rvalorbuscar2 <- "Por el almuerzo"
+Rvalorbuscar3 <- "Tengo hambre"
+Rvalorbuscar4 <- "Para desayunar"
+Rvalorbuscar5 <- "Carritos desayuneros"
+Rvalorbuscar6 <- "Emolientero"
+Rvalorbuscar7 <- "Bebida en carrellita"
+Rvalorbuscar8 <- "Preparada en carretilla"
+Rvalorbuscar9 <- "Carretilla"
+Rvalorbuscar10 <- "Carrito"
+Rvalorreemplazo <- "Todas las anteriores"
+Rvalorreemplazo3 <- "¨Por salud"
+
+DF$Razon <- gsub(Rvalorbuscar, Rvalorreemplazo, DF$Razon, ignore.case = TRUE)
+DF$Razon <- gsub(Rvalorbuscar2, Rvalorreemplazo3, DF$Razon, ignore.case = TRUE)
+DF$Razon <- gsub(Rvalorbuscar3, Rvalorreemplazo3, DF$Razon, ignore.case = TRUE)
+DF$Razon <- gsub(Rvalorbuscar4, Rvalorreemplazo3, DF$Razon, ignore.case = TRUE)
+DF
 
 Arreglando la variable sexo
 
