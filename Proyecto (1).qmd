@@ -239,50 +239,112 @@ Buscando los patrones que no cumplen para carreras.
 ```{r}
 table(DF$Carrera)
 ```
+Limpieza de las respuestas para la variable carreras
+```{r}
+DF$Carrera<-transmute(DF, Carrera= case_when( Carrera == 'Bioingeberia' ~ 'Bioingeniería',
+Carrera == 'bioingenieria' ~ 'Bioingeniería',
+Carrera == 'Bioingenieria' ~ 'Bioingeniería',
+Carrera == 'Bioingeniería' ~ 'Bioingeniería',
+Carrera == 'Bioingeniero' ~ 'Bioingeniería',
+Carrera == 'Ingeniería Biológica' ~ 'Bioingeniería',
 
-Bio x
+Carrera == 'Ing. Mecatrónica' ~ 'Ingeniería Mecatrónica',
+Carrera == 'ING. Mecatrónica' ~ 'Ingeniería Mecatrónica',
+Carrera == 'Ingeniera mecatrónica' ~ 'Ingeniería Mecatrónica',
+Carrera == 'Ingeniería mecatrónica' ~ 'Ingeniería Mecatrónica',
+Carrera == 'Ingeniería Mecatrónica' ~ 'Ingeniería Mecatrónica',
+Carrera == 'Mecatronica' ~ 'Ingeniería Mecatrónica',
+Carrera == 'mecatrónica' ~ 'Ingeniería Mecatrónica',
+Carrera == 'Mecatrónica' ~ 'Ingeniería Mecatrónica',
+Carrera == 'Mecatrónica creo' ~ 'Ingeniería Mecatrónica',
 
-ciencia de datos x
+Carrera == 'Electrónica' ~ 'Ingeniería Electrónica',
+Carrera == 'Ing electronica' ~ 'Ingeniería Electrónica',
+Carrera == 'Ingeniería electrónica' ~ 'Ingeniería Electrónica',
 
-ciencias de la omputacion x
+Carrera == 'Ing mecánica' ~ 'Ingeniería Mecánica',
+Carrera == 'Ing. Mecanica' ~ 'Ingeniería Mecánica',
+Carrera == 'Ing. Mecánica' ~ 'Ingeniería Mecánica',
+Carrera == 'ING. Mecánica' ~ 'Ingeniería Mecánica',
+Carrera == 'Ingenieria Mecánica' ~ 'Ingeniería Mecánica',
+Carrera == 'Ingeniería mecánica' ~ 'Ingeniería Mecánica',
+Carrera == 'Ingeniería Mecánica' ~ 'Ingeniería Mecánica',
+Carrera == 'Mecanica' ~ 'Ingeniería Mecánica',
+Carrera == 'Mecánica' ~ 'Ingeniería Mecánica',
 
-Industrial x
+Carrera == 'Ambiental' ~ 'Ingeniería Ambiental',
+Carrera == 'Ing Ambiental' ~ 'Ingeniería Ambiental',
+Carrera == 'Ing. Ambiental' ~ 'Ingeniería Ambiental',
+Carrera == 'ing.ambiental' ~ 'Ingeniería Ambiental',
+Carrera == 'ING.ambiental' ~ 'Ingeniería Ambiental',
+Carrera == 'Ingenieria Ambiental' ~ 'Ingeniería Ambiental',
+Carrera == 'ingeniería ambiental' ~ 'Ingeniería Ambiental',
+Carrera == 'ingeniería Ambiental' ~ 'Ingeniería Ambiental',
+Carrera == 'Ingeniería ambiental' ~ 'Ingeniería Ambiental',
+Carrera == 'Ingeniería Ambiental' ~ 'Ingeniería Ambiental',
 
-Ing civil x
+Carrera == 'Ing Química' ~ 'Ingeniería Química',
+Carrera == 'Ing. Química' ~ 'Ingeniería Química',
+Carrera == 'Ing.Química' ~ 'Ingeniería Química',
+Carrera == 'Ingenieria Quimica' ~ 'Ingeniería Química',
+Carrera == 'Ingeniería Quimica' ~ 'Ingeniería Química',
+Carrera == 'Ingeniería química' ~ 'Ingeniería Química',
+Carrera == 'Ingeniería Química' ~ 'Ingeniería Química',
 
-enegia x
+Carrera == 'Civil' ~ 'Ingeniería Civil',
+Carrera == 'ING chivil' ~ 'Ingeniería Civil',
+Carrera == 'Ing civil' ~ 'Ingeniería Civil',
+Carrera == 'ING civil' ~ 'Ingeniería Civil',
+Carrera == 'ing. civil' ~ 'Ingeniería Civil',
+Carrera == 'Ing. Civil' ~ 'Ingeniería Civil',
+Carrera == 'Ingenieria civil' ~ 'Ingeniería Civil',
+Carrera == 'Ingeniería civil' ~ 'Ingeniería Civil',
+Carrera == 'Ingeniería Civil' ~ 'Ingeniería Civil',
+
+Carrera == 'Industrial' ~ 'Ingeniería Industrial',
+Carrera == 'Ing industrial' ~ 'Ingeniería Industrial',
+Carrera == 'Ing Industrial' ~ 'Ingeniería Industrial',
+Carrera == 'ING industrial' ~ 'Ingeniería Industrial',
+Carrera == 'Ing. Industrial' ~ 'Ingeniería Industrial',
+Carrera == 'Ingenieria industrial' ~ 'Ingeniería Industrial',
+Carrera == 'Ingenieria Industrial' ~ 'Ingeniería Industrial',
+Carrera == 'ingeniería industrial' ~ 'Ingeniería Industrial',
+Carrera == 'Ingeniería industrial' ~ 'Ingeniería Industrial',
+Carrera == 'Ingeniería Industrial' ~ 'Ingeniería Industrial',
+
+Carrera == 'Energia' ~ 'Ingeniería de la Energía',
+Carrera == 'Energía' ~ 'Ingeniería de la Energía',
+Carrera == 'Ing de la energía' ~ 'Ingeniería de la Energía',
+Carrera == 'Ing de la Energía' ~ 'Ingeniería de la Energía',
+Carrera == 'Ing energia' ~ 'Ingeniería de la Energía',
+Carrera == 'Ing. De la Energía' ~ 'Ingeniería de la Energía',
+Carrera == 'Ingeniería de la energía' ~ 'Ingeniería de la Energía',
+Carrera == 'Ingeniería de la Energía' ~ 'Ingeniería de la Energía',
+
+Carrera == 'Ciencia de la computacion' ~ 'Ciencia de la Computación',
+Carrera == 'Ciencia de la computación' ~ 'Ciencia de la Computación',
+Carrera == 'Ciencia de la Computación' ~ 'Ciencia de la Computación',
+Carrera == 'Ciencias de la computacion' ~ 'Ciencia de la Computación',
+Carrera == 'Ciencias de la computación' ~ 'Ciencia de la Computación',
+Carrera == 'Ciencias de la Computación' ~ 'Ciencia de la Computación',
+Carrera == 'Computacion' ~ 'Ciencia de la Computación',
+Carrera == 'Computer Cience' ~ 'Ciencia de la Computación',
+Carrera == 'Computer science' ~ 'Ciencia de la Computación',
+Carrera == 'Computer Science' ~ 'Ciencia de la Computación',
+Carrera == 'Cs' ~ 'Ciencia de la Computación',
+Carrera == 'CS' ~ 'Ciencia de la Computación',
+
+Carrera == 'Ciencia de datos' ~ 'Ciencia de Datos',
+Carrera == 'Ciencia de Datos' ~ 'Ciencia de Datos',
+
+Carrera == 'admin' ~ 'Administración y Negocios Digitales',
+Carrera == 'Admin' ~ 'Administración y Negocios Digitales',
+Carrera == 'Administración y Negocios Digitales' ~ 'Administración y Negocios Digitales'
+))
+```
 
 ```{r}
-DF <- mutate(DF,carrera-cor==case_when(Carrera == 'Ingeniería Biológica' ~'Bioingeniería', 
-
-Carrera == 'Computer science' ~ 'Ciencias de la computación', 
-Carrera == 'Computer Science' ~ 'Ciencias de la computación',
-
-Carrera == 'Industrial'~'Ingeniería industrial',
-Carrera == 'Ing industrial'~'Ingeniería industrial',
-Carrera == 'Ing. Industrial'~'Ingeniería industrial',
-Carrera == 'Ingenieria industrial'~'Ingeniería industrial',
-Carrera == 'Ingenieria Industrial'~'Ingeniería industrial',
-Carrera == 'ingeniería industrial'~'Ingeniería industrial',
-Carrera == 'Ingeniería industrial'~'Ingeniería industrial',
-Carrera == 'Ingeniería Industrial'~'Ingeniería industrial',
-
-Carrera == 'ING chivil'~'Ingeniería civil',
-Carrera == 'Ing civil'~'Ingeniería civil',
-Carrera == 'ING civil'~'Ingeniería civil',
-Carrera == 'Ing. Civil'~'Ingeniería civil',
-Carrera == 'Ingenieria civil'~'Ingeniería civil',
-Carrera == 'Ingeniería civil'~'Ingeniería civil',
-Carrera == 'Ingeniería Civil'~'Ingeniería civil',
-
-Carrera == 'Ing de la energía'~'Ingeniería de la energía', 
-Carrera == 'Ing de la Energía'~'Ingeniería de la energía', 
-Carrera == 'Ing energia'~'Ingeniería de la energía', 
-Carrera == 'Ing. De la Energía'~'Ingeniería de la energía', 
-Carrera == 'Ingeniería de la Energía'~'Ingeniería de la energía', 
-
-Carrera == 'L'~'desconocido'))
-
+table(DF$Carrera)
 ```
 
 Buscando los patrones que no cumplen para compra.
