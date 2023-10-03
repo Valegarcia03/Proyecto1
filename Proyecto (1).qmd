@@ -526,24 +526,34 @@ ggplot(DF, aes(x = Consumo, y = Creditos)) +
   labs(x = "Consumo", y = "Creditos") +
   theme_minimal()
 ```
+Se observa que la mayoría de los estudiantes con altos créditos no consumen quinua. En este caso, podemos notar que hay más datos atípicos entre los que consumen quinua.
+
 ```{r}
 ggplot(DF, aes(x = Consumo, y = Ciclo)) +
   geom_boxplot() +
   labs(x = "Consumo", y = "Ciclo") +
   theme_minimal()
 ```
+La preponderancia se encuentra en el quinto ciclo, lo que indica que no hay una variación significativa entre aquellos que consumen y los que no.
+
 ```{r}
 ggplot(DF, aes(x = Consumo, y = Cursos)) +
   geom_boxplot() +
   labs(x = "Consumo", y = "Cursos") +
   theme_minimal()
 ```
+
+Los alumnos que consumen quinua pertenecen a una población más amplia, pero matriculan menos cursos en promedio.
+
 ```{r}
 ggplot(DF, aes(x = Consumo, y = Horas)) +
   geom_boxplot() +
   labs(x = "Consumo", y = "Horas") +
   theme_minimal()
 ```
+
+Los datos no atípicos son predominantemente de aquellos que consumen quinua y además superan a más de la mitad de los que sí consumen.
+
 ```{r}
 DF$Desempeño[is.na(DF$Desempeño)] <- 0
 
@@ -553,14 +563,17 @@ ggplot(DF, aes(x = Consumo, y = Desempeño)) +
   labs(x = "Consumo", y = "Desempeño") +
   theme_minimal()
 ```
-```{r}
-unique(paste(DF$Consumo, DF$Creditos, DF$Ciclo, DF$Horas, sep = " "))
-```
+Este gráfico indica que la gran mayoría de los estudiantes tienen un buen desempeño en comparación con los que no consumen quinua.
+
 ```{r}
 summary(DF$Creditos)
 summary(DF$Horas)
 
 ```
+Media : La mitad de personas tiene los creditos de 20.8 o 21.
+
+Mediana : Los datos son de 21 horas por estudiante
+
 ```{r}
 tabla_frecuencia <- table(DF$Ciclo, useNA = "ifany")
 moda <- names(tabla_frecuencia[tabla_frecuencia == max(tabla_frecuencia)])
