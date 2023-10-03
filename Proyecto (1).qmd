@@ -349,7 +349,7 @@ table(DF$Carrera)
 
 Buscando los patrones que no cumplen para compra.
 
-{r}
+```{r}
 patron_mercado <- "\\b(Mercado)\\b"
 patron_tienda <- "\\b(Tienda)\\b"
 patron_supermercado <- "\\b(Supermercado|Wong|Metro|Plaza Vea)\\b"
@@ -358,10 +358,10 @@ patron_todas <- "\\b(Todas las anteriores)\\b"
 DF1<-paste(patron_mercado,"|",patron_tienda,"|",patron_supermercado,"|",patron_todas, sep = "" )
 
 DF[!grepl(DF1, DF$Compra),]
-
+```
 Remplazando
 
-{r}
+```{r}
 Valorbuscar <- "Carretillas"
 Valorbuscar2 <- "Un puesto, cerca de la Universidad"
 Valorbuscar3 <- "A un negociando de confianza."
@@ -386,10 +386,10 @@ DF$Compra <- gsub(Valorbuscar8, valorreemplazo, DF$Compra, ignore.case = TRUE)
 DF$Compra <- gsub(Valorbuscar9, valorreemplazo, DF$Compra, ignore.case = TRUE)
 DF$Compra <- gsub(Valorbuscar10, valorreemplazo, DF$Compra, ignore.case = TRUE)
 DF
-
+```
 Para la razon
 
-{r}
+```{r}
 patron_salud <- "\\b(Por salud)\\b"
 patron_sabor <- "\\b(Por sabor)\\b"
 patron_costumbre <- "\\b(Por costumbre)\\b"
@@ -398,10 +398,10 @@ patron_todas_anteriores <- "\\b(Todas las anteriores)\\b"
 DF2<-paste(patron_salud,"|",patron_sabor,"|",patron_costumbre,"|",patron_todas_anteriores, sep = "" )
 
 DF[!grepl(DF2, DF$Razon),]
-
+```
 Reemplazando
 
-{r}
+```{r}
 Rvalorbuscar <- "Todas las anteriores :D"
 Rvalorbuscar2 <- "Por el almuerzo"
 Rvalorbuscar3 <- "Tengo hambre"
@@ -420,7 +420,7 @@ DF$Razon <- gsub(Rvalorbuscar2, Rvalorreemplazo3, DF$Razon, ignore.case = TRUE)
 DF$Razon <- gsub(Rvalorbuscar3, Rvalorreemplazo3, DF$Razon, ignore.case = TRUE)
 DF$Razon <- gsub(Rvalorbuscar4, Rvalorreemplazo3, DF$Razon, ignore.case = TRUE)
 DF
-
+```
 Arreglando la variable sexo
 
 ```{r}
