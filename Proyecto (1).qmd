@@ -241,7 +241,7 @@ table(DF$Carrera)
 ```
 Limpieza de las respuestas para la variable carreras
 ```{r}
-DF$Carrera<-transmute(DF, Carrera= case_when( Carrera == 'Bioingeberia' ~ 'Bioingeniería',
+DFC<-mutate(DF, Carreracor= case_when( Carrera == 'Bioingeberia' ~ 'Bioingeniería',
 Carrera == 'bioingenieria' ~ 'Bioingeniería',
 Carrera == 'Bioingenieria' ~ 'Bioingeniería',
 Carrera == 'Bioingeniería' ~ 'Bioingeniería',
@@ -342,6 +342,11 @@ Carrera == 'Admin' ~ 'Administración y Negocios Digitales',
 Carrera == 'Administración y Negocios Digitales' ~ 'Administración y Negocios Digitales'
 ))
 ```
+'''{r}
+DF$Carrera<- DFC$Carreracor
+DF
+'''
+Verificación de la limpieza
 
 ```{r}
 table(DF$Carrera)
@@ -432,10 +437,6 @@ table(DF$Sexo)
 DX$Sexo<-transmute(DX, Sexo= case_when( Sexo == 'NA' ~ 'desconocido',                                                      Sexo == 'MM' ~ 'M',                                                                Sexo =='NB'~'desconocido',                                                         Sexo =='M'~'M',                                                                    Sexo =='F'~'F',                                                                    Sexo =='L'~'desconocido',                                                          Sexo =='125'~ 'desconocido',                                                       Sexo=='´M' ~ 'M'))
 ```
 
-x2 1 2 3 probandooo holi
-
-
------------------ ANGEL --------------
 ```{r}
 DB <- read_csv("_Patrones  asociados al consumo de quinua en estudiantes de UTEC durante el periodo 2023-2.csv")
 ```
@@ -493,9 +494,6 @@ table(DB_$SEXO)
 DB <- DB_
 ```
 
-Variable *SEXO* limpia.
-
------------------ JHON --------------
 ```{r, eval=FALSE}
 
 if (!require(dplyr)) {
