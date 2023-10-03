@@ -521,3 +521,61 @@ DD <- data
 DD$factor[DD$factor == ""] <- "N.A"
 DD
 ```
+
+```{r}
+ggplot(DF, aes(x = Consumo, y = Creditos)) +
+  geom_boxplot() +
+  labs(x = "Consumo", y = "Creditos") +
+  theme_minimal()
+```
+```{r}
+ggplot(DF, aes(x = Consumo, y = Ciclo)) +
+  geom_boxplot() +
+  labs(x = "Consumo", y = "Ciclo") +
+  theme_minimal()
+```
+```{r}
+ggplot(DF, aes(x = Consumo, y = Cursos)) +
+  geom_boxplot() +
+  labs(x = "Consumo", y = "Cursos") +
+  theme_minimal()
+```
+```{r}
+ggplot(DF, aes(x = Consumo, y = Horas)) +
+  geom_boxplot() +
+  labs(x = "Consumo", y = "Horas") +
+  theme_minimal()
+```
+```{r}
+DF$Desempeño[is.na(DF$Desempeño)] <- 0
+
+# Crear un gráfico de barras
+ggplot(DF, aes(x = Consumo, y = Desempeño)) +
+  geom_bar(stat = "identity", fill = "blue") +
+  labs(x = "Consumo", y = "Desempeño") +
+  theme_minimal()
+```
+```{r}
+unique(paste(DF$Consumo, DF$Creditos, DF$Ciclo, DF$Horas, sep = " "))
+```
+```{r}
+summary(DF$Creditos)
+summary(DF$Horas)
+
+```
+```{r}
+tabla_frecuencia <- table(DF$Ciclo, useNA = "ifany")
+moda <- names(tabla_frecuencia[tabla_frecuencia == max(tabla_frecuencia)])
+cat("La moda de la variable (incluyendo N/A) es:", moda, "\n")
+```
+```{r}
+tabla_frecuencia <- table(DF$Consumo, useNA = "ifany")
+moda <- names(tabla_frecuencia[tabla_frecuencia == max(tabla_frecuencia)])
+cat("La moda de la variable (incluyendo N/A) es:", moda, "\n")
+```
+```{r}
+tabla_frecuencia <- table(DF$Desempeño, useNA = "ifany")
+moda <- names(tabla_frecuencia[tabla_frecuencia == max(tabla_frecuencia)])
+cat("La moda de la variable (incluyendo N/A) es:", moda, "\n")
+```
+
