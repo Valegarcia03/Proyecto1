@@ -495,3 +495,29 @@ DB <- DB_
 
 Variable *SEXO* limpia.
 
+----------------- JHON --------------
+```{r, eval=FALSE}
+
+if (!require(dplyr)) {
+  install.packages("dplyr")
+}
+
+
+library(dplyr)
+
+```
+
+**Lectura de la data "2022.csv"**
+
+```{r ,eval = FALSE}
+data <- read.csv("_Patrones  asociados al consumo de quinua en estudiantes de UTEC durante el periodo 2023-2.csv")
+DD <- data 
+```
+
+```{r}
+
+
+# Cambiar las respuestas en blanco por "N.A" en la columna "factor"
+DD$factor[DD$factor == ""] <- "N.A"
+DD
+```
