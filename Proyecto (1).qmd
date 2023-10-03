@@ -577,3 +577,39 @@ moda <- names(tabla_frecuencia[tabla_frecuencia == max(tabla_frecuencia)])
 cat("La moda de la variable (incluyendo N/A) es:", moda, "\n")
 ```
 
+
+```{r}
+DF$X.Dónde.sueles.comprar.la.quinua.que.consumes. [DF$X.Dónde.sueles.comprar.la.quinua.que.consumes. == "Supermercado (Wong, Metro, Plaza Vea, etc)"] <- "Supermercado" 
+```
+```{r}
+DF %>%
+  filter(!(X.Qué.tipo.de.quinua.sueles.consumir. %in% "")) %>%
+  filter(X.Dónde.sueles.comprar.la.quinua.que.consumes. %in% 
+           c("Supermercado", "Carretillas", "Tienda", "Mercado")) %>%
+  ggplot() +
+  aes(
+    y = X.Dónde.sueles.comprar.la.quinua.que.consumes.,
+    x = X.Consume.quinua.,
+    fill = X.Consume.quinua.  # Usar la variable para determinar el color
+  ) +
+  geom_tile() +
+  labs(x = "Consumo", y = "Lugar de compra", fill = "Consumo") +  
+  scale_fill_manual(values = c("Sí" = "blue", "No" = "red")) +  
+  theme_linedraw()
+```
+
+Conocimiento - Consumen ==>  ¿tienes conocimiento sobre la quinua?- Principal razón por la que consumes quinua?
+```{r}
+
+ggplot(DF) +
+  aes(
+    x = X.Tiene.conocimiento.sobre.la.quinua.,
+    y = X.Cuál.es.la.principal.razón.por.la.que.consumes.quinua.,
+    fill = X.Tiene.conocimiento.sobre.la.quinua.  
+  ) +
+  geom_tile() +
+  labs(x = "Consumen", y = "Conocimiento", fill = "Consumen") +
+  scale_fill_manual(values = c("Si" = "Pink", "No" = "red")) +  
+  theme_classic()
+```
+
