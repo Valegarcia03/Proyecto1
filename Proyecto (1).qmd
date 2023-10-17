@@ -95,7 +95,7 @@ editor: visual
 ## Tabla de variables
 
 | Variable                            | Pregunta para recopilar información                                                          | Tipo         | Clase     | Restricciones                                    |
-|--------------|----------------|--------------|--------------|--------------|
+|---------------|---------------|---------------|---------------|---------------|
 | Sexo                                | ¿Cuál es su género?                                                                          | Categórica   | Nominales | Masculino, femenino , otro.                      |
 | Edad                                | ¿Qué edad tiene?                                                                             | Cuantitativa | Discretas | Entero positivo (años)                           |
 | Peso                                | ¿Cuál es su peso?                                                                            | Cuantitativa | Continuas | Entero positivo (Kilogramos)                     |
@@ -239,7 +239,9 @@ Buscando los patrones que no cumplen para carreras.
 ```{r}
 table(DF$Carrera)
 ```
+
 Limpieza de las respuestas para la variable carreras
+
 ```{r}
 DFC<-mutate(DF, Carreracor= case_when( Carrera == 'Bioingeberia' ~ 'Bioingeniería',
 Carrera == 'bioingenieria' ~ 'Bioingeniería',
@@ -342,11 +344,8 @@ Carrera == 'Admin' ~ 'Administración y Negocios Digitales',
 Carrera == 'Administración y Negocios Digitales' ~ 'Administración y Negocios Digitales'
 ))
 ```
-'''{r}
-DF$Carrera<- DFC$Carreracor
-DF
-'''
-Verificación de la limpieza
+
+'''{r} DF$Carrera<- DFC$Carreracor DF''' Verificación de la limpieza
 
 ```{r}
 table(DF$Carrera)
@@ -364,6 +363,7 @@ DF1<-paste(patron_mercado,"|",patron_tienda,"|",patron_supermercado,"|",patron_t
 
 DF[!grepl(DF1, DF$Compra),]
 ```
+
 Remplazando
 
 ```{r}
@@ -392,6 +392,7 @@ DF$Compra <- gsub(Valorbuscar9, valorreemplazo, DF$Compra, ignore.case = TRUE)
 DF$Compra <- gsub(Valorbuscar10, valorreemplazo, DF$Compra, ignore.case = TRUE)
 DF
 ```
+
 Para la razon
 
 ```{r}
@@ -404,6 +405,7 @@ DF2<-paste(patron_salud,"|",patron_sabor,"|",patron_costumbre,"|",patron_todas_a
 
 DF[!grepl(DF2, DF$Razon),]
 ```
+
 Reemplazando
 
 ```{r}
@@ -426,6 +428,7 @@ DF$Razon <- gsub(Rvalorbuscar3, Rvalorreemplazo3, DF$Razon, ignore.case = TRUE)
 DF$Razon <- gsub(Rvalorbuscar4, Rvalorreemplazo3, DF$Razon, ignore.case = TRUE)
 DF
 ```
+
 Arreglando la variable sexo
 
 ```{r}
@@ -526,6 +529,7 @@ ggplot(DF, aes(x = Consumo, y = Creditos)) +
   labs(x = "Consumo", y = "Creditos") +
   theme_minimal()
 ```
+
 Se observa que la mayoría de los estudiantes con altos créditos no consumen quinua. En este caso, podemos notar que hay más datos atípicos entre los que consumen quinua.
 
 ```{r}
@@ -534,7 +538,8 @@ ggplot(DF, aes(x = Consumo, y = Ciclo)) +
   labs(x = "Consumo", y = "Ciclo") +
   theme_minimal()
 ```
-La preponderancia se encuentra en el quinto ciclo, lo que indica que no hay una variación significativa entre aquellos que consumen y los que no.
+
+La preponderancia se encuentra en el quinto ciclo, lo que indica que no hay una variación significativa entre aquellos que consumen y los que no. Holita
 
 ```{r}
 ggplot(DF, aes(x = Consumo, y = Cursos)) +
@@ -563,6 +568,7 @@ ggplot(DF, aes(x = Consumo, y = Desempeño)) +
   labs(x = "Consumo", y = "Desempeño") +
   theme_minimal()
 ```
+
 Este gráfico indica que la gran mayoría de los estudiantes tienen un buen desempeño en comparación con los que no consumen quinua.
 
 ```{r}
@@ -570,6 +576,7 @@ summary(DF$Creditos)
 summary(DF$Horas)
 
 ```
+
 Media : La mitad de personas tiene los creditos de 20.8 o 21.
 
 Mediana : Los datos son de 21 horas por estudiante
@@ -579,21 +586,23 @@ tabla_frecuencia <- table(DF$Ciclo, useNA = "ifany")
 moda <- names(tabla_frecuencia[tabla_frecuencia == max(tabla_frecuencia)])
 cat("La moda de la variable (incluyendo N/A) es:", moda, "\n")
 ```
+
 ```{r}
 tabla_frecuencia <- table(DF$Consumo, useNA = "ifany")
 moda <- names(tabla_frecuencia[tabla_frecuencia == max(tabla_frecuencia)])
 cat("La moda de la variable (incluyendo N/A) es:", moda, "\n")
 ```
+
 ```{r}
 tabla_frecuencia <- table(DF$Desempeño, useNA = "ifany")
 moda <- names(tabla_frecuencia[tabla_frecuencia == max(tabla_frecuencia)])
 cat("La moda de la variable (incluyendo N/A) es:", moda, "\n")
 ```
 
-
 ```{r}
 DF$X.Dónde.sueles.comprar.la.quinua.que.consumes. [DF$X.Dónde.sueles.comprar.la.quinua.que.consumes. == "Supermercado (Wong, Metro, Plaza Vea, etc)"] <- "Supermercado" 
 ```
+
 ```{r}
 DF %>%
   filter(!(X.Qué.tipo.de.quinua.sueles.consumir. %in% "")) %>%
@@ -611,7 +620,8 @@ DF %>%
   theme_linedraw()
 ```
 
-Conocimiento - Consumen ==>  ¿tienes conocimiento sobre la quinua?- Principal razón por la que consumes quinua?
+Conocimiento - Consumen ==\> ¿tienes conocimiento sobre la quinua?- Principal razón por la que consumes quinua?
+
 ```{r}
 
 ggplot(DF) +
@@ -625,4 +635,3 @@ ggplot(DF) +
   scale_fill_manual(values = c("Si" = "Pink", "No" = "red")) +  
   theme_classic()
 ```
-
