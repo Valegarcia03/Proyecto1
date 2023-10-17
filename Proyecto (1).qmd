@@ -94,31 +94,31 @@ editor: visual
 
 ## Tabla de variables
 
-| Variable                            | Pregunta para recopilar información                                                          | Tipo         | Clase     | Restricciones                                    |
-|---------------|---------------|---------------|---------------|---------------|
-| Sexo                                | ¿Cuál es su género?                                                                          | Categórica   | Nominales | Masculino, femenino , otro.                      |
-| Edad                                | ¿Qué edad tiene?                                                                             | Cuantitativa | Discretas | Entero positivo (años)                           |
-| Peso                                | ¿Cuál es su peso?                                                                            | Cuantitativa | Continuas | Entero positivo (Kilogramos)                     |
-| Estatura                            | ¿Cuál es su estatura?                                                                        | Cuantitativa | Continuas | Entero positivo (metros)                         |
-| Carrera                             | ¿Qué carrera está estudiando?                                                                | Categórica   | Nominales | Pregunta abierta                                 |
-| Ciclo académico                     | ¿En qué ciclo académico se encuentra actualmente?                                            | Cuantitativa | Ordinal   | Entero positivo \[1:10\]                         |
-| Créditos matriculados               | ¿En cuántos créditos se ha matriculado este ciclo ?                                          | Cuantitativa | Discreta  | Entero positivo                                  |
-| Cursos matriculados                 | ¿En cuántos cursos se ha matriculado este ciclo?                                             | Cuantitativa | Discreta  | Entero positivo                                  |
-| Horas de estudio                    | ¿Cuántas horas a la semana dedica a estudiar?                                                | Categórica   | Ordinales | Entero positivo                                  |
-| Conocimiento sobre la quinua        | ¿Tiene conocimiento sobre la quinua?                                                         | Categórica   | Nominal   | Pregunta cerrada (2 opciones)                    |
-| Consume quinua                      | ¿Consume quinua?                                                                             | Categórica   | Nominales | Pregunta cerrada (2 opciones)                    |
-| Razón del no consumo                | ¿A qué factor se debe su no consumo de quinua?                                               | Categórica   | Ordinal   | Pregunta cerrada (4 opciones)                    |
-| Frecuencia del consumo              | ¿Con qué frecuencia consumes quinua?                                                         | Categórica   | Ordinales | (1:Nunca, 5:Siempre)                             |
-| Tipo de quinua                      | ¿Qué tipo de quinua sueles consumir?                                                         | Categórica   | Nominales | Pregunta cerrada (3 opciones)                    |
-| Razón del consumo                   | ¿Cuál es la principal razón por la que consumes quinua?                                      | Categórica   | Nominales | Pregunta cerrada (5 opciones)                    |
-| Lugar de compra                     | ¿Dónde sueles comprar la quinua que consumes?                                                | Categórica   | Nominales | Pregunta cerrada (4 opciones)                    |
-| Informado sobre beneficios          | ¿Qué tan informado/a estás sobre los beneficios de la quinua?                                | Categórica   | Ordinales | (1:Muy desinformado, 5:Muy informado)            |
-| Beneficios de la quinua             | ¿Cúal consideras que es el principal beneficio de consumir quinua?                           | Categórica   | Nominales | Pregunta cerrada (6 opciones)                    |
-| Relevancia del consumo              | ¿Qué prioridad o relevancia le das al consumo de la quinua?                                  | Categórica   | Ordinales | (1: Muy baja, 5: Muy alta)                       |
-| Relación del consumo y los estudios | ¿Consideras que el consumo de quinua puede tener alguna relación con tu desempeño académico? | Categórica   | Ordinales | (1: Nada de relación, 5: Totalmente relacionado) |
-| Beneficios en los estudios          | ¿Cuál es la relación que tiene el consumo de quinua con respecto a los estudios?             | Categórica   | Nominales | Pregunta cerrada (5 opciones)                    |
-| Impacto en la salud                 | ¿Cuál es el impacto que tiene la quinua en su salud?                                         | Categórica   | Nominales | Pregunta cerrada (5 opciones)                    |
-| Opinión sobre el consumo            | ¿Cúal sería su opinión respecto al consumo de quinua?                                        | Categórica   | Nominales | Pregunta cerrada (3 opciones)                    |
+| Variable                            | Pregunta para recopilar información                                                          | Tipo         | Clase    | Restricciones                                    |
+|-------------------------------------|----------------------------------------------------------------------------------------------|--------------|----------|--------------------------------------------------|
+| Sexo                                | ¿Cuál es su género?                                                                          | Categórica   | Nominal  | Masculino, femenino , otro.                      |
+| Edad                                | ¿Qué edad tiene?                                                                             | Cuantitativa | Discreta | Entero positivo (años)                           |
+| Peso                                | ¿Cuál es su peso?                                                                            | Cuantitativa | Continua | Número positivo (Kilogramos)                     |
+| Estatura                            | ¿Cuál es su estatura?                                                                        | Cuantitativa | Continua | Número positivo (metros)                         |
+| Carrera                             | ¿Qué carrera está estudiando?                                                                | Categórica   | Nominal  | Todas las carreras de UTEC                       |
+| Ciclo académico                     | ¿En qué ciclo académico se encuentra actualmente?                                            | Cuantitativa | Ordinal  | Entero positivo \[1:10\]                         |
+| Créditos matriculados               | ¿En cuántos créditos se ha matriculado este ciclo ?                                          | Cuantitativa | Discreta | Entero positivo                                  |
+| Cursos matriculados                 | ¿En cuántos cursos se ha matriculado este ciclo?                                             | Cuantitativa | Discreta | Entero positivo                                  |
+| Horas de estudio                    | ¿Cuántas horas a la semana dedica a estudiar?                                                | Categórica   | Ordinal  | Entero positivo                                  |
+| Conocimiento sobre la quinua        | ¿Tiene conocimiento sobre la quinua?                                                         | Categórica   | Nominal  | Pregunta cerrada (2 opciones)                    |
+| Consume quinua                      | ¿Consume quinua?                                                                             | Categórica   | Nominal  | Pregunta cerrada (2 opciones)                    |
+| Razón del no consumo                | ¿A qué factor se debe su no consumo de quinua?                                               | Categórica   | Ordinal  | Pregunta cerrada (4 opciones)                    |
+| Frecuencia del consumo              | ¿Con qué frecuencia consumes quinua?                                                         | Categórica   | Ordinal  | (1:Nunca, 5:Siempre)                             |
+| Tipo de quinua                      | ¿Qué tipo de quinua sueles consumir?                                                         | Categórica   | Nominal  | Pregunta cerrada (3 opciones)                    |
+| Razón del consumo                   | ¿Cuál es la principal razón por la que consumes quinua?                                      | Categórica   | Nominal  | Pregunta cerrada (5 opciones)                    |
+| Lugar de compra                     | ¿Dónde sueles comprar la quinua que consumes?                                                | Categórica   | Nominal  | Pregunta cerrada (4 opciones)                    |
+| Informado sobre beneficios          | ¿Qué tan informado/a estás sobre los beneficios de la quinua?                                | Categórica   | Ordinal  | (1:Muy desinformado, 5:Muy informado)            |
+| Beneficios de la quinua             | ¿Cúal consideras que es el principal beneficio de consumir quinua?                           | Categórica   | Nominal  | Pregunta cerrada (6 opciones)                    |
+| Relevancia del consumo              | ¿Qué prioridad o relevancia le das al consumo de la quinua?                                  | Categórica   | Ordinal  | (1: Muy baja, 5: Muy alta)                       |
+| Relación del consumo y los estudios | ¿Consideras que el consumo de quinua puede tener alguna relación con tu desempeño académico? | Categórica   | Ordinal  | (1: Nada de relación, 5: Totalmente relacionado) |
+| Beneficios en los estudios          | ¿Cuál es la relación que tiene el consumo de quinua con respecto a los estudios?             | Categórica   | Nominal  | Pregunta cerrada (5 opciones)                    |
+| Impacto en la salud                 | ¿Cuál es el impacto que tiene la quinua en su salud?                                         | Categórica   | Nominal  | Pregunta cerrada (5 opciones)                    |
+| Opinión sobre el consumo            | ¿Cúal sería su opinión respecto al consumo de quinua?                                        | Categórica   | Nominal  | Pregunta cerrada (3 opciones)                    |
 
 ## Limpieza de base de datos
 
@@ -436,11 +436,6 @@ table(DF$Sexo)
 ```
 
 ```{r}
-#ejemplo
-DX$Sexo<-transmute(DX, Sexo= case_when( Sexo == 'NA' ~ 'desconocido',                                                      Sexo == 'MM' ~ 'M',                                                                Sexo =='NB'~'desconocido',                                                         Sexo =='M'~'M',                                                                    Sexo =='F'~'F',                                                                    Sexo =='L'~'desconocido',                                                          Sexo =='125'~ 'desconocido',                                                       Sexo=='´M' ~ 'M'))
-```
-
-```{r}
 DB <- read_csv("_Patrones  asociados al consumo de quinua en estudiantes de UTEC durante el periodo 2023-2.csv")
 ```
 
@@ -461,8 +456,6 @@ Tipo de variable
 ```{r}
 str(DB_$SEXO)
 ```
-
-OK.
 
 Analizando los datos ingresados
 
@@ -517,7 +510,7 @@ DD <- data
 
 ```{r}
 
-
+DD =read_csv("_Patrones  asociados al consumo de quinua en estudiantes de UTEC durante el periodo 2023-2.csv")
 # Cambiar las respuestas en blanco por "N.A" en la columna "factor"
 DD$factor[DD$factor == ""] <- "N.A"
 DD
@@ -539,7 +532,7 @@ ggplot(DF, aes(x = Consumo, y = Ciclo)) +
   theme_minimal()
 ```
 
-La preponderancia se encuentra en el quinto ciclo, lo que indica que no hay una variación significativa entre aquellos que consumen y los que no. Holita
+La preponderancia se encuentra en el quinto ciclo, lo que indica que no hay una variación significativa entre aquellos que consumen y los que no.
 
 ```{r}
 ggplot(DF, aes(x = Consumo, y = Cursos)) +
